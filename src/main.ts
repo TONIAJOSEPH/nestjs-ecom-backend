@@ -11,8 +11,8 @@ async function bootstrap() {
 
   const config=new DocumentBuilder()
   .setTitle('Ecommerce-backend API')
-  .setDescription('Use the base API url as http://localhost:3000')
-  .addServer('http://localhost:3000')
+  .setDescription('Use the base API url as http://localhost:3001')
+  .addServer('http://localhost:3001')
   .setVersion('1.0')
   .addBearerAuth(
     {
@@ -42,6 +42,6 @@ async function bootstrap() {
   ))
 
   app.useGlobalInterceptors(new DataResponseInterceptor());   //interceptors for changing response object
-  await app.listen(process.env.PORT ?? 3000);
+  await app.listen(process.env.PORT ?? 3001);
 }
 bootstrap();
